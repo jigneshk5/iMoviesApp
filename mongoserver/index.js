@@ -8,7 +8,7 @@ const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://jigneshk5:jignesh12345@ds147225.mlab.com:47225/parkingdb",{
+mongoose.connect(process.env.MONGOLAB_URI,{
   useNewUrlParser: true 
 }).then( ()=>{
     console.log('Connected to Database!');
