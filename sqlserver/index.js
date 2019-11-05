@@ -6,16 +6,6 @@ var path = require('path');
 const app = express();
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-const mongoose = require("mongoose");
-
-mongoose.connect("mongodb://jigneshk5:jignesh12345@ds147225.mlab.com:47225/parkingdb",{
-  useNewUrlParser: true 
-}).then( ()=>{
-    console.log('Connected to Database!');
-})
-.catch(err =>{
-  console.log(err);
-})
 //Middleware
 
 app.use(bodyParser.json());
